@@ -43,9 +43,7 @@ app.get("/hello", (req, res) => {
 app.use("/api/customer", require("./api/customer.js"));
 app.use("/api/admin", require("./api/admin.js"));
 
-// deployment
 const path = require("path");
-// '/admin' serve the files at client-admin/build/* as static files
 app.use(
   "/admin",
   express.static(path.resolve(__dirname, "../client-admin/build")),
@@ -53,7 +51,6 @@ app.use(
 app.get("admin/*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../client-admin/build", "index.html"));
 });
-// '/' serve the files at client-customer/build/* as static files
 app.use(
   "/",
   express.static(path.resolve(__dirname, "../client-customer/build")),
