@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import MyContext from '../contexts/MyContexts';
 import { Link } from 'react-router-dom';
 class Login extends Component {
-  static contextType = MyContext; // using this.context to access global state
+  static contextType = MyContext; 
 
   constructor(props) {
     super(props);
