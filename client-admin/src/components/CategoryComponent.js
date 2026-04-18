@@ -136,6 +136,8 @@ class Category extends Component {
         this.setState({ itemSelected: item }); // Lưu thông tin hàng đã chọn
     }
 
+    
+
     // Lấy dữ liệu category từ API
     apiGetCategories() {
         const config = { headers: { 'x-access-token': this.context.token } };
